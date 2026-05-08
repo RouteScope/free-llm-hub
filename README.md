@@ -136,16 +136,16 @@
 | **vLLM** | — | 🏠 Self-hosted | — | — | [🔗](https://vllm.ai) |
 | **Ollama** | — | 🏠 Self-hosted | — | — | [🔗](https://ollama.com) |
 | **llama.cpp** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/ggml-org/llama.cpp) |
-| **Text Generation Inference (TGI)** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/huggingface/text-generation-inference) |
-| **SGLang** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/sgl-project/sglang) |
-| **TensorRT-LLM** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/NVIDIA/TensorRT-LLM) |
+| **Text Generation Inference (TGI)** | — | 🏠 Self-hosted | — | — | [🔗](https://huggingface.co/docs/text-generation-inference) |
+| **SGLang** | — | 🏠 Self-hosted | — | — | [🔗](https://sgl-project.github.io) |
+| **TensorRT-LLM** | — | 🏠 Self-hosted | — | — | [🔗](https://nvidia.github.io/TensorRT-LLM) |
 | **LocalAI** | — | 🏠 Self-hosted | — | — | [🔗](https://localai.io) |
-| **LMDeploy** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/InternLM/lmdeploy) |
-| **MLC-LLM** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/mlc-ai/mlc-llm) |
-| **KTransformers** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/kvcache-ai/ktransformers) |
+| **LMDeploy** | — | 🏠 Self-hosted | — | — | [🔗](https://lmdeploy.readthedocs.io) |
+| **MLC-LLM** | — | 🏠 Self-hosted | — | — | [🔗](https://llm.mlc.ai) |
+| **KTransformers** | — | 🏠 Self-hosted | — | — | [🔗](https://kvcache-ai.github.io/ktransformers) |
 | **ExLlamaV2** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/turboderp-org/exllamav2) |
-| **Aphrodite Engine** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/aphrodite-engine/aphrodite-engine) |
-| **CTranslate2** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/OpenNMT/CTranslate2) |
+| **Aphrodite Engine** | — | 🏠 Self-hosted | — | — | [🔗](https://aphrodite.pygmalion.chat) |
+| **CTranslate2** | — | 🏠 Self-hosted | — | — | [🔗](https://opennmt.net/CTranslate2) |
 
 ## 🚪 Gateways / Routers
 
@@ -160,8 +160,8 @@
 | **NewAPI** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/Calcium-Ion/new-api) |
 | **Helicone** | — | 🟢 Freemium | — | — | [🔗](https://helicone.ai) |
 | **Langfuse** | — | 🟢 Freemium | — | — | [🔗](https://langfuse.com) |
-| **RouteLLM** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/lm-sys/RouteLLM) |
-| **Arize Phoenix** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/Arize-ai/phoenix) |
+| **RouteLLM** | — | 🏠 Self-hosted | — | — | [🔗](https://lmsys.org/blog/2024-07-01-routellm) |
+| **Arize Phoenix** | — | 🏠 Self-hosted | — | — | [🔗](https://docs.arize.com/phoenix) |
 
 ## 🎨 Specialty APIs
 
@@ -175,7 +175,7 @@
 | **Kokoro TTS** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/hexgrad/kokoro) |
 | **Deepgram** | — | 🎁 $200 trial | — | — | [🔗](https://deepgram.com) |
 | **AssemblyAI** | — | 🎁 $50 trial | — | — | [🔗](https://assemblyai.com) |
-| **Whisper** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/openai/whisper) |
+| **Whisper** | — | 🏠 Self-hosted | — | — | [🔗](https://openai.com/research/whisper) |
 | **faster-whisper** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/SYSTRAN/faster-whisper) |
 | **Voyage AI** | — | 🟢 Freemium | — | 50M tokens free | [🔗](https://voyageai.com) |
 | **Jina AI** | — | 🟢 Freemium | — | 1M tokens free | [🔗](https://jina.ai) |
@@ -184,7 +184,7 @@
 | **fal.ai** | — | 🎁 Trial | — | — | [🔗](https://fal.ai) |
 | **Pollinations** | — | 🟢 Free | — | — | [🔗](https://pollinations.ai) |
 | **Replicate** | — | 🎁 $0.5 trial | — | — | [🔗](https://replicate.com) |
-| **ComfyUI** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/comfyanonymous/ComfyUI) |
+| **ComfyUI** | — | 🏠 Self-hosted | — | — | [🔗](https://www.comfy.org) |
 | **AUTOMATIC1111 WebUI** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/AUTOMATIC1111/stable-diffusion-webui) |
 | **Runway** | — | 💳 $15/mo | — | — | [🔗](https://runwayml.com) |
 | **Kling** | CN | 🟢 Freemium | — | — | [🔗](https://kling.ai) |
@@ -195,9 +195,9 @@
 | Name | Country | Pricing | Rate Limits | Models / Notes | Link |
 |------|:-:|:-:|:-:|------|:-:|
 | **CrewAI** | — | 🏠 Self-hosted | — | — | [🔗](https://crewai.com) |
-| **AutoGen** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/microsoft/autogen) |
-| **LangGraph** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/langchain-ai/langgraph) |
-| **Pydantic AI** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/pydantic/pydantic-ai) |
+| **AutoGen** | — | 🏠 Self-hosted | — | — | [🔗](https://microsoft.github.io/autogen) |
+| **LangGraph** | — | 🏠 Self-hosted | — | — | [🔗](https://langchain-ai.github.io/langgraph) |
+| **Pydantic AI** | — | 🏠 Self-hosted | — | — | [🔗](https://ai.pydantic.dev) |
 | **Mastra** | — | 🏠 Self-hosted | — | — | [🔗](https://mastra.ai) |
 
 ## 📚 LLM Frameworks
@@ -207,9 +207,9 @@
 | **LangChain** | — | 🏠 Self-hosted | — | — | [🔗](https://langchain.com) |
 | **LlamaIndex** | — | 🏠 Self-hosted | — | — | [🔗](https://llamaindex.ai) |
 | **Haystack** | — | 🏠 Self-hosted | — | — | [🔗](https://haystack.deepset.ai) |
-| **DSPy** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/stanfordnlp/dspy) |
-| **Semantic Kernel** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/microsoft/semantic-kernel) |
-| **Vercel AI SDK** | — | 🟢 Free | — | — | [🔗](https://github.com/vercel/ai) |
+| **DSPy** | — | 🏠 Self-hosted | — | — | [🔗](https://dspy.ai) |
+| **Semantic Kernel** | — | 🏠 Self-hosted | — | — | [🔗](https://learn.microsoft.com/semantic-kernel) |
+| **Vercel AI SDK** | — | 🟢 Free | — | — | [🔗](https://sdk.vercel.ai) |
 
 ## 🗄️ Vector Databases
 
@@ -221,16 +221,16 @@
 | **Chroma** | — | 🏠 Self-hosted | — | — | [🔗](https://trychroma.com) |
 | **pgvector** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/pgvector/pgvector) |
 | **Pinecone** | — | 🟢 Freemium | — | 1 free index | [🔗](https://pinecone.io) |
-| **LanceDB** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/lancedb/lancedb) |
-| **Vespa** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/vespa-engine/vespa) |
+| **LanceDB** | — | 🏠 Self-hosted | — | — | [🔗](https://lancedb.com) |
+| **Vespa** | — | 🏠 Self-hosted | — | — | [🔗](https://vespa.ai) |
 
 ## 📊 Eval Frameworks
 
 | Name | Country | Pricing | Rate Limits | Models / Notes | Link |
 |------|:-:|:-:|:-:|------|:-:|
-| **Promptfoo** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/promptfoo/promptfoo) |
-| **DeepEval** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/confident-ai/deepeval) |
-| **Ragas** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/explodinggradients/ragas) |
+| **Promptfoo** | — | 🏠 Self-hosted | — | — | [🔗](https://promptfoo.dev) |
+| **DeepEval** | — | 🏠 Self-hosted | — | — | [🔗](https://deepeval.com) |
+| **Ragas** | — | 🏠 Self-hosted | — | — | [🔗](https://ragas.io) |
 | **OpenAI Evals** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/openai/evals) |
 
 ## 📦 Model Catalogs
@@ -247,8 +247,8 @@
 | Name | Country | Pricing | Rate Limits | Models / Notes | Link |
 |------|:-:|:-:|:-:|------|:-:|
 | **Aider** | — | 🏠 Self-hosted | — | — | [🔗](https://aider.chat) |
-| **Cline** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/cline/cline) |
-| **OpenHands** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/All-Hands-AI/OpenHands) |
+| **Cline** | — | 🏠 Self-hosted | — | — | [🔗](https://cline.bot) |
+| **OpenHands** | — | 🏠 Self-hosted | — | — | [🔗](https://www.all-hands.dev) |
 | **Continue.dev** | — | 🏠 Self-hosted | — | — | [🔗](https://continue.dev) |
 | **Codex CLI** | — | 🏠 Self-hosted | — | — | [🔗](https://github.com/openai/codex) |
 
@@ -267,20 +267,20 @@
 
 | Name | Country | Pricing | Rate Limits | Models / Notes | Link |
 |------|:-:|:-:|:-:|------|:-:|
-| **Llama (Meta)** | — | — | — | llama-3.3-70b, llama-4-scout, llama-4-maverick | [🔗](https://github.com/meta-llama/llama-models) |
-| **Qwen (Alibaba)** | — | — | — | qwen3-0.6b, qwen3-8b, qwen3-72b | [🔗](https://github.com/QwenLM/Qwen) |
-| **DeepSeek** | — | — | — | deepseek-v3, deepseek-r1, deepseek-v4-pro | [🔗](https://github.com/deepseek-ai) |
-| **Mistral / Mixtral** | — | — | — | mistral-7b, mixtral-8x7b, mixtral-8x22b | [🔗](#) |
-| **Gemma (Google)** | — | — | — | gemma-3-1b, gemma-3-4b, gemma-3-12b | [🔗](#) |
-| **Phi (Microsoft)** | — | — | — | phi-4, phi-4-mini | [🔗](#) |
-| **Yi (01.AI)** | — | — | — | yi-6b, yi-9b, yi-34b | [🔗](#) |
-| **InternLM** | — | — | — | internlm2.5-7b, internlm3-20b | [🔗](https://github.com/InternLM/InternLM) |
-| **GLM (Zhipu)** | — | — | — | glm-4-9b, glm-4-32b, glm-4.5-flash | [🔗](#) |
-| **Hermes (Nous Research)** | — | — | — | hermes-3-405b, hermes-4 | [🔗](#) |
-| **gpt-oss (OpenAI)** | — | — | — | gpt-oss-20b, gpt-oss-120b | [🔗](#) |
-| **Granite (IBM)** | — | — | — | granite-3.0, granite-code | [🔗](https://github.com/ibm-granite) |
-| **OLMo (AllenAI)** | — | — | — | olmo-2-1b, olmo-2-13b, olmo-2-32b | [🔗](https://github.com/allenai/OLMo) |
-| **SmolLM (HuggingFace)** | — | — | — | smollm-135m, smollm-360m, smollm-1.7b | [🔗](https://github.com/huggingface/smollm) |
+| **Llama (Meta)** | — | — | — | llama-3.3-70b, llama-4-scout, llama-4-maverick | [🔗](https://llama.com) |
+| **Qwen (Alibaba)** | — | — | — | qwen3-0.6b, qwen3-8b, qwen3-72b | [🔗](https://qwenlm.github.io) |
+| **DeepSeek** | — | — | — | deepseek-v3, deepseek-r1, deepseek-v4-pro | [🔗](https://deepseek.com) |
+| **Mistral / Mixtral** | — | — | — | mistral-7b, mixtral-8x7b, mixtral-8x22b | [🔗](https://mistral.ai) |
+| **Gemma (Google)** | — | — | — | gemma-3-1b, gemma-3-4b, gemma-3-12b | [🔗](https://ai.google.dev/gemma) |
+| **Phi (Microsoft)** | — | — | — | phi-4, phi-4-mini | [🔗](https://huggingface.co/microsoft/phi-4) |
+| **Yi (01.AI)** | — | — | — | yi-6b, yi-9b, yi-34b | [🔗](https://01.ai) |
+| **InternLM** | — | — | — | internlm2.5-7b, internlm3-20b | [🔗](https://internlm.intern-ai.org.cn) |
+| **GLM (Zhipu)** | — | — | — | glm-4-9b, glm-4-32b, glm-4.5-flash | [🔗](https://github.com/THUDM/GLM-4) |
+| **Hermes (Nous Research)** | — | — | — | hermes-3-405b, hermes-4 | [🔗](https://nousresearch.com) |
+| **gpt-oss (OpenAI)** | — | — | — | gpt-oss-20b, gpt-oss-120b | [🔗](https://openai.com/index/introducing-gpt-oss) |
+| **Granite (IBM)** | — | — | — | granite-3.0, granite-code | [🔗](https://www.ibm.com/granite) |
+| **OLMo (AllenAI)** | — | — | — | olmo-2-1b, olmo-2-13b, olmo-2-32b | [🔗](https://allenai.org/olmo) |
+| **SmolLM (HuggingFace)** | — | — | — | smollm-135m, smollm-360m, smollm-1.7b | [🔗](https://huggingface.co/blog/smollm) |
 
 ---
 
@@ -290,4 +290,3 @@ Edit `data/0X-*.yaml`, run `./scripts/merge.sh && python scripts/render_readme.p
 
 ## 📜 License
 MIT
-# free-llm-hub

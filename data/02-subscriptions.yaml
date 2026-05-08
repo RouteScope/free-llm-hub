@@ -1,0 +1,415 @@
+# ============================================================
+# 2. SUBSCRIPTION PLANS (do mais barato ao mais caro)
+# ============================================================
+
+# --- TIER 1: $5-15/mês ---
+- slug: elevenlabs-starter
+  name: ElevenLabs Starter
+  category: subscription-plan
+  subcategory: tts
+  pricing: {model: subscription, monthly_usd: 5}
+  website: https://elevenlabs.io/pricing
+  notes: 30K caracteres TTS/mês
+  status: active
+
+- slug: suno-pro
+  name: Suno Pro
+  category: subscription-plan
+  subcategory: music-gen
+  pricing: {model: subscription, monthly_usd: 10}
+  website: https://suno.com/pricing
+  notes: 500 créditos diários
+  status: active
+
+- slug: midjourney-basic
+  name: Midjourney Basic
+  category: subscription-plan
+  subcategory: image-gen
+  pricing: {model: subscription, monthly_usd: 10}
+  website: https://midjourney.com
+  notes: ~200 imagens/mês
+  status: active
+
+- slug: github-copilot-pro
+  name: GitHub Copilot Pro
+  category: subscription-plan
+  subcategory: coding
+  pricing: {model: subscription, monthly_usd: 10}
+  website: https://github.com/features/copilot
+  notes: 300 premium req, multi-LLM (Claude Opus, GPT-5)
+  models: [gpt-5, claude-opus-4.6, gemini-3]
+  tags: [best-value-coding]
+  status: active
+
+- slug: tabnine-pro
+  name: Tabnine Pro
+  category: subscription-plan
+  subcategory: coding
+  pricing: {model: subscription, monthly_usd: 12}
+  website: https://www.tabnine.com/pricing
+  notes: Code completion full-length, multi-LLM chat
+  status: active
+
+- slug: leonardo-apprentice
+  name: Leonardo.ai Apprentice
+  category: subscription-plan
+  subcategory: image-gen
+  pricing: {model: subscription, monthly_usd: 12}
+  website: https://leonardo.ai
+  status: active
+
+- slug: descript-hobbyist
+  name: Descript Hobbyist
+  category: subscription-plan
+  subcategory: audio-video-edit
+  pricing: {model: subscription, monthly_usd: 12}
+  website: https://descript.com
+  notes: 10h transcrição/mês
+  status: active
+
+- slug: runway-standard
+  name: Runway Standard
+  category: subscription-plan
+  subcategory: video-gen
+  pricing: {model: subscription, monthly_usd: 15}
+  website: https://runwayml.com/pricing
+  status: active
+
+- slug: windsurf-pro
+  name: Windsurf Pro
+  category: subscription-plan
+  subcategory: coding
+  pricing: {model: subscription, monthly_usd: 15}
+  website: https://windsurf.com/pricing
+  notes: 500 Flex credits, Opus 4.6/GPT-5/Gemini 3
+  models: [claude-opus-4.6, gpt-5.4, gemini-3-pro]
+  status: active
+
+- slug: mistral-le-chat-pro
+  name: Mistral Le Chat Pro
+  category: subscription-plan
+  subcategory: consumer-chat
+  pricing: {model: subscription, monthly_usd: 15}
+  website: https://chat.mistral.ai
+  models: [mistral-large-3]
+  status: active
+
+- slug: augment-indie
+  name: Augment Code Indie
+  category: subscription-plan
+  subcategory: coding
+  pricing: {model: subscription, monthly_usd: 15}
+  website: https://augmentcode.com
+  status: active
+
+- slug: writesonic
+  name: Writesonic
+  category: subscription-plan
+  subcategory: content-gen
+  pricing: {model: subscription, monthly_usd: 16}
+  website: https://writesonic.com
+  status: active
+
+# --- TIER 2: $19-30/mês ---
+- slug: github-copilot-business
+  name: GitHub Copilot Business
+  category: subscription-plan
+  subcategory: coding
+  pricing: {model: subscription, monthly_usd: 19}
+  website: https://github.com/features/copilot
+  status: active
+
+- slug: amazon-q-pro
+  name: Amazon Q Developer Pro
+  category: subscription-plan
+  subcategory: coding
+  pricing: {model: subscription, monthly_usd: 19}
+  website: https://aws.amazon.com/q/developer
+  status: active
+
+- slug: notebooklm-plus
+  name: NotebookLM Plus
+  category: subscription-plan
+  subcategory: research
+  pricing: {model: subscription, monthly_usd: 19.99}
+  website: https://notebooklm.google
+  status: active
+
+- slug: chatgpt-plus
+  name: ChatGPT Plus
+  category: subscription-plan
+  subcategory: consumer-chat
+  pricing: {model: subscription, monthly_usd: 20}
+  website: https://chatgpt.com
+  models: [gpt-5.4, codex, dall-e-3]
+  notes: GPT-5.4, Codex, Voice, Custom GPTs
+  status: active
+
+- slug: claude-pro
+  name: Claude Pro
+  category: subscription-plan
+  subcategory: consumer-chat
+  pricing: {model: subscription, monthly_usd: 20}
+  website: https://claude.ai
+  models: [claude-opus-4.6, claude-sonnet-4.6]
+  notes: 5x usage free, Projects
+  status: active
+
+- slug: gemini-advanced
+  name: Gemini Advanced
+  category: subscription-plan
+  subcategory: consumer-chat
+  pricing: {model: subscription, monthly_usd: 20}
+  website: https://gemini.google.com
+  models: [gemini-3-pro]
+  notes: 2TB Drive + Veo
+  status: active
+
+- slug: perplexity-pro
+  name: Perplexity Pro
+  category: subscription-plan
+  subcategory: search-ai
+  pricing: {model: subscription, monthly_usd: 20}
+  website: https://perplexity.ai/pro
+  status: active
+
+- slug: cursor-pro
+  name: Cursor Pro
+  category: subscription-plan
+  subcategory: coding
+  pricing: {model: subscription, monthly_usd: 20}
+  website: https://cursor.com/pricing
+  models: [claude-opus-4.6, gpt-5.4, gemini-3-pro]
+  notes: Frontier models, Cloud agents, MCPs
+  status: active
+
+- slug: v0-premium
+  name: v0 Premium (Vercel)
+  category: subscription-plan
+  subcategory: coding
+  pricing: {model: subscription, monthly_usd: 20}
+  website: https://v0.dev
+  status: active
+
+- slug: lovable
+  name: Lovable
+  category: subscription-plan
+  subcategory: coding
+  pricing: {model: subscription, monthly_usd: 20}
+  website: https://lovable.dev
+  status: active
+
+- slug: claude-code-pro
+  name: Claude Code Pro
+  category: subscription-plan
+  subcategory: coding
+  pricing: {model: subscription, monthly_usd: 20}
+  website: https://www.anthropic.com/claude-code
+  status: active
+
+- slug: grok-premium
+  name: Grok Premium (X)
+  category: subscription-plan
+  subcategory: consumer-chat
+  pricing: {model: subscription, monthly_usd: 22}
+  website: https://x.com/i/grok
+  models: [grok-3]
+  status: active
+
+- slug: heygen-creator
+  name: HeyGen Creator
+  category: subscription-plan
+  subcategory: video-avatar
+  pricing: {model: subscription, monthly_usd: 29}
+  website: https://heygen.com
+  status: active
+
+- slug: synthesia-starter
+  name: Synthesia Starter
+  category: subscription-plan
+  subcategory: video-avatar
+  pricing: {model: subscription, monthly_usd: 29}
+  website: https://synthesia.io
+  status: active
+
+- slug: midjourney-standard
+  name: Midjourney Standard
+  category: subscription-plan
+  subcategory: image-gen
+  pricing: {model: subscription, monthly_usd: 30}
+  website: https://midjourney.com
+  status: active
+
+# --- TIER 3: $40-100/mês ---
+- slug: tabnine-enterprise
+  name: Tabnine Enterprise
+  category: subscription-plan
+  subcategory: coding
+  pricing: {model: subscription, monthly_usd: 39}
+  website: https://www.tabnine.com/pricing
+  notes: Self-host VPC/on-prem
+  status: active
+
+- slug: github-copilot-enterprise
+  name: GitHub Copilot Enterprise
+  category: subscription-plan
+  subcategory: coding
+  pricing: {model: subscription, monthly_usd: 39}
+  website: https://github.com/features/copilot
+  status: active
+
+- slug: cursor-teams
+  name: Cursor Teams
+  category: subscription-plan
+  subcategory: coding
+  pricing: {model: subscription, monthly_usd: 40}
+  website: https://cursor.com/pricing
+  status: active
+
+- slug: jasper-creator
+  name: Jasper Creator
+  category: subscription-plan
+  subcategory: content-gen
+  pricing: {model: subscription, monthly_usd: 49}
+  website: https://jasper.ai
+  status: active
+
+- slug: copyai-pro
+  name: Copy.ai Pro
+  category: subscription-plan
+  subcategory: content-gen
+  pricing: {model: subscription, monthly_usd: 49}
+  website: https://copy.ai
+  status: active
+
+- slug: cursor-pro-plus
+  name: Cursor Pro+
+  category: subscription-plan
+  subcategory: coding
+  pricing: {model: subscription, monthly_usd: 60}
+  website: https://cursor.com/pricing
+  notes: 3x usage Claude/GPT/Gemini
+  status: active
+
+- slug: windsurf-team
+  name: Windsurf Team
+  category: subscription-plan
+  subcategory: coding
+  pricing: {model: subscription, monthly_usd: 100}
+  website: https://windsurf.com/pricing
+  notes: 1500 credits/user, SSO
+  status: active
+
+- slug: chatgpt-pro-100
+  name: ChatGPT Pro (new)
+  category: subscription-plan
+  subcategory: consumer-chat
+  pricing: {model: subscription, monthly_usd: 100}
+  website: https://chatgpt.com
+  notes: 5x Plus, 10x Codex
+  status: active
+
+- slug: claude-max-5x
+  name: Claude Max 5x
+  category: subscription-plan
+  subcategory: consumer-chat
+  pricing: {model: subscription, monthly_usd: 100}
+  website: https://claude.ai
+  status: active
+
+# --- TIER 4: $200+/mês ---
+- slug: chatgpt-pro-200
+  name: ChatGPT Pro (original)
+  category: subscription-plan
+  subcategory: consumer-chat
+  pricing: {model: subscription, monthly_usd: 200}
+  website: https://chatgpt.com
+  notes: 20x Plus, Sora, exclusive Pro models
+  status: active
+
+- slug: claude-max-20x
+  name: Claude Max 20x
+  category: subscription-plan
+  subcategory: consumer-chat
+  pricing: {model: subscription, monthly_usd: 200}
+  website: https://claude.ai
+  status: active
+
+- slug: cursor-ultra
+  name: Cursor Ultra
+  category: subscription-plan
+  subcategory: coding
+  pricing: {model: subscription, monthly_usd: 200}
+  website: https://cursor.com/pricing
+  status: active
+
+- slug: windsurf-max
+  name: Windsurf Max
+  category: subscription-plan
+  subcategory: coding
+  pricing: {model: subscription, monthly_usd: 200}
+  website: https://windsurf.com/pricing
+  notes: Unlimited credits, 1M context
+  status: active
+
+- slug: gemini-ultra
+  name: Gemini Ultra
+  category: subscription-plan
+  subcategory: consumer-chat
+  pricing: {model: subscription, monthly_usd: 250}
+  website: https://gemini.google.com
+  models: [gemini-3-pro-deep-think]
+  status: active
+
+- slug: devin
+  name: Devin (Cognition AI)
+  category: subscription-plan
+  subcategory: autonomous-agent
+  pricing: {model: subscription, monthly_usd: 500}
+  website: https://devin.ai
+  notes: Autonomous coding agent
+  status: active
+
+# --- Enterprise ---
+- slug: openai-enterprise
+  name: OpenAI Enterprise
+  category: subscription-plan
+  subcategory: enterprise
+  pricing: {model: subscription, monthly_usd: null}
+  website: https://openai.com/enterprise
+  notes: Custom pricing, SOC2
+  status: active
+
+- slug: anthropic-enterprise
+  name: Anthropic Enterprise
+  category: subscription-plan
+  subcategory: enterprise
+  pricing: {model: subscription, monthly_usd: null}
+  website: https://anthropic.com/enterprise
+  status: active
+
+- slug: aws-bedrock
+  name: AWS Bedrock
+  category: subscription-plan
+  subcategory: enterprise
+  pricing: {model: pay-per-token}
+  website: https://aws.amazon.com/bedrock
+  models: [claude, llama, mistral, cohere]
+  notes: Multi-modelo via AWS
+  status: active
+
+- slug: azure-openai
+  name: Azure OpenAI
+  category: subscription-plan
+  subcategory: enterprise
+  pricing: {model: pay-per-token}
+  website: https://azure.microsoft.com/en-us/products/ai-services/openai-service
+  status: active
+
+- slug: vertex-ai
+  name: Google Vertex AI
+  category: subscription-plan
+  subcategory: enterprise
+  pricing: {model: pay-per-token}
+  website: https://cloud.google.com/vertex-ai
+  status: active

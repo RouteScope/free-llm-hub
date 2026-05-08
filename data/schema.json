@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "LLM Hub Entry",
+  "type": "object",
+  "required": ["slug", "name", "category"],
+  "anyOf": [
+    {"required": ["website"]},
+    {"required": ["github"]}
+  ],
+  "properties": {
+    "slug": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+    "name": {"type": "string"},
+    "category": {
+      "type": "string",
+      "enum": [
+        "provider-api", "inference-provider", "subscription-plan",
+        "inference-engine", "gateway", "specialty-api",
+        "agent-framework", "llm-framework", "vector-db",
+        "eval-framework", "model-catalog", "coding-tool",
+        "desktop-ui", "open-weights-family"
+      ]
+    },
+    "subcategory": {"type": "string"},
+    "country": {"type": "string", "minLength": 2, "maxLength": 2},
+    "website": {"type": "string", "format": "uri"},
+    "github": {"type": "string", "format": "uri"},
+    "license": {"type": "string"},
+    "open_source": {"type": "boolean"},
+    "openai_compatible": {"type": "boolean"},
+    "pricing": {
+      "type": "object",
+      "properties": {
+        "model": {"type": "string", "enum": ["free", "freemium", "subscription", "pay-per-token", "trial-credits", "self-hosted"]},
+        "free_tier": {"type": "boolean"},
+        "monthly_usd": {"type": ["number", "null"]},
+        "input_per_mtok_usd": {"type": ["number", "null"]},
+        "output_per_mtok_usd": {"type": ["number", "null"]},
+        "trial_credits_usd": {"type": ["number", "null"]},
+        "requires_credit_card": {"type": "boolean"}
+      }
+    },
+    "rate_limits": {
+      "type": "object",
+      "properties": {
+        "rpm": {"type": ["integer", "null"]},
+        "rpd": {"type": ["integer", "null"]},
+        "tpm": {"type": ["integer", "null"]},
+        "monthly_tokens": {"type": ["integer", "null"]}
+      }
+    },
+    "models": {"type": "array", "items": {"type": "string"}},
+    "tags": {"type": "array", "items": {"type": "string"}},
+    "sources": {"type": "array", "items": {"type": "string"}},
+    "last_verified": {"type": "string", "format": "date"},
+    "status": {"type": "string", "enum": ["active", "deprecated", "unstable", "beta"]},
+    "notes": {"type": "string"}
+  }
+}

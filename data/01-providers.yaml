@@ -1,0 +1,518 @@
+# ============================================================
+# 1. PROVIDER APIs - PERMANENT FREE
+# ============================================================
+- slug: groq
+  name: Groq
+  category: inference-provider
+  subcategory: permanent-free
+  country: US
+  website: https://groq.com
+  github: https://github.com/groq
+  openai_compatible: true
+  pricing: {model: freemium, free_tier: true, requires_credit_card: false}
+  rate_limits: {rpm: 30, rpd: 1000}
+  models: [llama-3.3-70b, llama-4-scout, kimi-k2, qwen3, deepseek-r1-distill]
+  tags: [ultra-fast, lpu, openai-compat]
+  status: active
+
+- slug: cerebras
+  name: Cerebras
+  category: inference-provider
+  subcategory: permanent-free
+  country: US
+  website: https://cloud.cerebras.ai
+  openai_compatible: true
+  pricing: {model: freemium, free_tier: true, requires_credit_card: false}
+  rate_limits: {rpm: 30, rpd: 14400}
+  models: [llama-3.3-70b, qwen3-235b, gpt-oss-120b]
+  tags: [wafer-scale, ultra-fast]
+  status: active
+
+- slug: google-ai-studio
+  name: Google AI Studio (Gemini)
+  category: provider-api
+  subcategory: permanent-free
+  country: US
+  website: https://aistudio.google.com
+  openai_compatible: false
+  pricing: {model: freemium, free_tier: true, requires_credit_card: false}
+  rate_limits: {rpm: 15, rpd: 1000}
+  models: [gemini-2.5-pro, gemini-2.5-flash, gemini-2.5-flash-lite, gemma-3-27b]
+  tags: [multimodal, 1m-context, geo-restricted-eu]
+  status: active
+
+- slug: mistral
+  name: Mistral AI (La Plateforme)
+  category: provider-api
+  subcategory: permanent-free
+  country: FR
+  website: https://console.mistral.ai
+  openai_compatible: true
+  pricing: {model: freemium, free_tier: true}
+  rate_limits: {rpm: 60, monthly_tokens: 1000000000}
+  models: [mistral-large-3, mistral-small-3.1, ministral-8b, codestral]
+  tags: [european, codestral]
+  status: active
+
+- slug: cohere
+  name: Cohere
+  category: provider-api
+  subcategory: permanent-free
+  country: CA
+  website: https://cohere.com
+  openai_compatible: false
+  pricing: {model: freemium, free_tier: true}
+  rate_limits: {rpm: 20, monthly_tokens: null}
+  models: [command-a, command-r-plus, command-r7b, embed-4, rerank-3.5]
+  tags: [embeddings, rerank, non-commercial-free]
+  status: active
+
+- slug: zhipu
+  name: Zhipu AI (Z.AI / GLM)
+  category: provider-api
+  subcategory: permanent-free
+  country: CN
+  website: https://open.bigmodel.cn
+  openai_compatible: true
+  pricing: {model: freemium, free_tier: true}
+  models: [glm-4.7-flash, glm-4.5-flash, glm-4.6v-flash, glm-5]
+  tags: [chinese, free-flash-models]
+  status: active
+
+- slug: nvidia-nim
+  name: NVIDIA NIM
+  category: inference-provider
+  subcategory: permanent-free
+  country: US
+  website: https://build.nvidia.com
+  openai_compatible: true
+  pricing: {model: freemium, free_tier: true}
+  rate_limits: {rpm: 40}
+  models: [llama-3.3-70b, mistral-large, qwen3-235b, deepseek-r1]
+  status: active
+
+- slug: openrouter
+  name: OpenRouter
+  category: gateway
+  subcategory: aggregator
+  country: US
+  website: https://openrouter.ai
+  openai_compatible: true
+  pricing: {model: freemium, free_tier: true}
+  rate_limits: {rpm: 20, rpd: 50}
+  models: [deepseek-r1-free, llama-3.3-70b-free, gpt-oss-120b-free, qwen3-free]
+  tags: [aggregator, 30-free-models, $10-topup-1k-rpd]
+  status: active
+
+- slug: github-models
+  name: GitHub Models
+  category: gateway
+  subcategory: aggregator
+  country: US
+  website: https://github.com/marketplace/models
+  openai_compatible: true
+  pricing: {model: freemium, free_tier: true}
+  rate_limits: {rpm: 15, rpd: 150}
+  models: [gpt-5, claude-sonnet-4, llama-3.3-70b, deepseek-r1, grok-3]
+  tags: [github-token, multi-vendor]
+  status: active
+
+- slug: cloudflare-workers-ai
+  name: Cloudflare Workers AI
+  category: inference-provider
+  subcategory: permanent-free
+  country: US
+  website: https://developers.cloudflare.com/workers-ai
+  openai_compatible: true
+  pricing: {model: freemium, free_tier: true}
+  rate_limits: {rpd: null}
+  models: [llama-3.3-70b, qwen-qwq-32b, "+47 more"]
+  tags: [edge, 10k-neurons-day]
+  status: active
+
+- slug: huggingface-inference
+  name: HuggingFace Inference Providers
+  category: inference-provider
+  subcategory: permanent-free
+  country: US
+  website: https://huggingface.co/docs/inference-providers
+  openai_compatible: true
+  pricing: {model: freemium, free_tier: true, trial_credits_usd: 0.10}
+  models: [llama-3.3-70b, qwen2.5-72b, mistral-7b, "many more"]
+  tags: [hub, multi-provider]
+  status: active
+
+- slug: vercel-ai-gateway
+  name: Vercel AI Gateway
+  category: gateway
+  subcategory: aggregator
+  country: US
+  website: https://vercel.com/ai-gateway
+  openai_compatible: true
+  pricing: {model: freemium, free_tier: true}
+  models: [multiple]
+  status: active
+
+- slug: opencode-zen
+  name: OpenCode Zen
+  category: inference-provider
+  subcategory: coding-focused
+  country: US
+  website: https://opencode.ai
+  openai_compatible: true
+  pricing: {model: freemium, free_tier: true}
+  status: active
+
+- slug: ollama-cloud
+  name: Ollama Cloud
+  category: inference-provider
+  subcategory: permanent-free
+  country: US
+  website: https://ollama.com/cloud
+  openai_compatible: true
+  pricing: {model: freemium, free_tier: true}
+  models: [deepseek-v3.2, qwen3.5, kimi-k2.5]
+  tags: [1-concurrent-model]
+  status: active
+
+- slug: llm7
+  name: LLM7.io
+  category: inference-provider
+  subcategory: permanent-free
+  country: GB
+  website: https://llm7.io
+  openai_compatible: true
+  pricing: {model: free}
+  rate_limits: {rpm: 30}
+  models: [deepseek-r1, qwen2.5-coder, "+27 more"]
+  status: active
+
+- slug: kluster
+  name: Kluster AI
+  category: inference-provider
+  subcategory: permanent-free
+  country: US
+  website: https://kluster.ai
+  openai_compatible: true
+  pricing: {model: freemium, free_tier: true}
+  models: [deepseek-r1, llama-4-maverick, qwen3-235b]
+  status: active
+
+# ============================================================
+# 1.5. INFERENCE PROVIDERS - TRIAL CREDITS
+# ============================================================
+- slug: together
+  name: Together AI
+  category: inference-provider
+  subcategory: trial-credits
+  country: US
+  website: https://together.ai
+  openai_compatible: true
+  pricing: {model: trial-credits, trial_credits_usd: 5}
+  models: [llama-3.3, mixtral, qwen-2.5, deepseek-r1]
+  tags: [200-models]
+  status: active
+
+- slug: fireworks
+  name: Fireworks AI
+  category: inference-provider
+  subcategory: trial-credits
+  country: US
+  website: https://fireworks.ai
+  openai_compatible: true
+  pricing: {model: trial-credits, trial_credits_usd: 1}
+  rate_limits: {rpm: 600}
+  models: [llama-3.3-70b, qwen-2.5-72b, deepseek-v3]
+  status: active
+
+- slug: deepinfra
+  name: DeepInfra
+  category: inference-provider
+  subcategory: pay-per-token
+  country: US
+  website: https://deepinfra.com
+  openai_compatible: true
+  pricing: {model: pay-per-token, input_per_mtok_usd: 0.14, output_per_mtok_usd: 0.28}
+  models: [deepseek-v4-flash, kimi-k2.6, glm-5, qwen3.5, mimo-v2.5]
+  tags: [cheapest-deepseek]
+  status: active
+
+- slug: baseten
+  name: Baseten
+  category: inference-provider
+  subcategory: hosting
+  country: US
+  website: https://baseten.co
+  pricing: {model: trial-credits, trial_credits_usd: 30}
+  status: active
+
+- slug: nebius
+  name: Nebius
+  category: inference-provider
+  subcategory: trial-credits
+  country: NL
+  website: https://nebius.ai
+  pricing: {model: trial-credits}
+  status: active
+
+- slug: novita
+  name: Novita AI
+  category: inference-provider
+  subcategory: trial-credits
+  country: SG
+  website: https://novita.ai
+  openai_compatible: true
+  pricing: {model: trial-credits}
+  status: active
+
+- slug: hyperbolic
+  name: Hyperbolic
+  category: inference-provider
+  subcategory: trial-credits
+  country: US
+  website: https://hyperbolic.xyz
+  pricing: {model: trial-credits}
+  models: [llama-3.3, deepseek]
+  status: active
+
+- slug: sambanova
+  name: SambaNova Cloud
+  category: inference-provider
+  subcategory: trial-credits
+  country: US
+  website: https://cloud.sambanova.ai
+  openai_compatible: true
+  pricing: {model: freemium, free_tier: true}
+  models: [llama-4]
+  tags: [rdu-chips]
+  status: active
+
+- slug: scaleway
+  name: Scaleway Generative APIs
+  category: inference-provider
+  subcategory: free-tier
+  country: FR
+  website: https://www.scaleway.com/en/generative-apis
+  openai_compatible: true
+  pricing: {model: freemium, free_tier: true}
+  status: active
+
+- slug: lepton
+  name: Lepton AI
+  category: inference-provider
+  subcategory: trial-credits
+  country: US
+  website: https://lepton.ai
+  pricing: {model: trial-credits, trial_credits_usd: 10}
+  status: active
+
+- slug: avian
+  name: Avian.io
+  category: inference-provider
+  subcategory: free-tier
+  country: US
+  website: https://avian.io
+  pricing: {model: freemium, free_tier: true}
+  models: [llama-3.1-405b, qwen]
+  status: active
+
+- slug: featherless
+  name: Featherless AI
+  category: inference-provider
+  subcategory: subscription
+  country: US
+  website: https://featherless.ai
+  pricing: {model: subscription, monthly_usd: 10}
+  models: ["4000+ HF models"]
+  status: active
+
+- slug: targon
+  name: Targon (Bittensor)
+  category: inference-provider
+  subcategory: decentralized
+  country: US
+  website: https://targon.com
+  pricing: {model: freemium, free_tier: true}
+  models: [deepseek, llama]
+  tags: [bittensor, decentralized]
+  status: active
+
+- slug: chutes
+  name: Chutes
+  category: inference-provider
+  subcategory: trial-credits
+  website: https://chutes.ai
+  pricing: {model: trial-credits}
+  status: active
+
+# ============================================================
+# 1.6. CHINESE PROVIDERS
+# ============================================================
+- slug: deepseek
+  name: DeepSeek Platform
+  category: provider-api
+  subcategory: pay-per-token
+  country: CN
+  website: https://platform.deepseek.com
+  openai_compatible: true
+  pricing: {model: pay-per-token, input_per_mtok_usd: 0.14, output_per_mtok_usd: 0.28}
+  models: [deepseek-v3.2, deepseek-r1, deepseek-v4-pro, deepseek-v4-flash]
+  tags: [chinese, mit-license, 90-percent-cache-discount]
+  status: active
+
+- slug: moonshot
+  name: Moonshot AI (Kimi)
+  category: provider-api
+  subcategory: trial-credits
+  country: CN
+  website: https://platform.moonshot.cn
+  openai_compatible: true
+  pricing: {model: freemium, trial_credits_usd: null}
+  models: [kimi-k2.5, kimi-k2.6, kimi-long-context]
+  tags: [chinese, long-context]
+  status: active
+
+- slug: siliconflow
+  name: SiliconFlow (硅基流动)
+  category: inference-provider
+  subcategory: chinese-cloud
+  country: CN
+  website: https://cloud.siliconflow.cn
+  openai_compatible: true
+  pricing: {model: freemium, free_tier: true}
+  rate_limits: {rpm: 1000, tpm: 50000}
+  models: [qwen3-8b, deepseek-r1-distill, glm-4.1v-9b, deepseek-ocr-free]
+  tags: [chinese, ¥14-credits, qwen2.5-7b-free-forever]
+  status: active
+
+- slug: dashscope
+  name: DashScope (Alibaba)
+  category: provider-api
+  subcategory: chinese-cloud
+  country: CN
+  website: https://dashscope.aliyun.com
+  openai_compatible: true
+  pricing: {model: freemium, free_tier: true}
+  models: [qwen-max, qwen-plus, qwen-vl, qwen3-235b]
+  tags: [1m-tokens-free-per-model]
+  status: active
+
+- slug: minimax
+  name: MiniMax
+  category: provider-api
+  subcategory: chinese-cloud
+  country: CN
+  website: https://api.minimax.chat
+  openai_compatible: true
+  pricing: {model: trial-credits}
+  models: [minimax-m2.5, minimax-m2.1, abab6.5]
+  status: active
+
+- slug: 01ai
+  name: 01.AI (Yi / 零一万物)
+  category: provider-api
+  subcategory: chinese-cloud
+  country: CN
+  website: https://platform.01.ai
+  pricing: {model: trial-credits}
+  models: [yi-large, yi-lightning, yi-vision]
+  status: active
+
+- slug: stepfun
+  name: StepFun (阶跃星辰)
+  category: provider-api
+  subcategory: chinese-cloud
+  country: CN
+  website: https://platform.stepfun.com
+  pricing: {model: trial-credits, input_per_mtok_usd: 0.10, output_per_mtok_usd: 0.30}
+  models: [step-3.5-flash, step-2]
+  status: active
+
+- slug: baidu-qianfan
+  name: Baidu Qianfan (ERNIE)
+  category: provider-api
+  subcategory: chinese-cloud
+  country: CN
+  website: https://qianfan.cloud.baidu.com
+  pricing: {model: freemium, free_tier: true}
+  models: [ernie-4.0, ernie-speed]
+  tags: [ernie-speed-free]
+  status: active
+
+- slug: tencent-hunyuan
+  name: Tencent Hunyuan
+  category: provider-api
+  subcategory: chinese-cloud
+  country: CN
+  website: https://hunyuan.tencent.com
+  pricing: {model: freemium, free_tier: true}
+  models: [hunyuan-lite, hunyuan-pro, hunyuan-turbo]
+  status: active
+
+- slug: internlm
+  name: InternLM (Shanghai AI Lab)
+  category: provider-api
+  subcategory: chinese-cloud
+  country: CN
+  website: https://internlm.intern-ai.org.cn
+  pricing: {model: freemium, free_tier: true}
+  models: [internlm2.5, internvl]
+  status: active
+
+# ============================================================
+# 1.7. PROPRIETARY API (paid only)
+# ============================================================
+- slug: openai-api
+  name: OpenAI API
+  category: provider-api
+  subcategory: pay-per-token
+  country: US
+  website: https://platform.openai.com
+  openai_compatible: true
+  pricing: {model: pay-per-token, input_per_mtok_usd: 1.25, output_per_mtok_usd: 10.00}
+  models: [gpt-5, gpt-5.1, gpt-5.2, gpt-5.4, gpt-5.4-pro, o3, o3-pro]
+  status: active
+
+- slug: anthropic-api
+  name: Anthropic API
+  category: provider-api
+  subcategory: pay-per-token
+  country: US
+  website: https://console.anthropic.com
+  openai_compatible: false
+  pricing: {model: pay-per-token, input_per_mtok_usd: 3.00, output_per_mtok_usd: 15.00}
+  models: [claude-sonnet-4.6, claude-opus-4.6, claude-haiku-4]
+  status: active
+
+- slug: xai-grok
+  name: xAI Grok API
+  category: provider-api
+  subcategory: pay-per-token
+  country: US
+  website: https://console.x.ai
+  openai_compatible: true
+  pricing: {model: pay-per-token, input_per_mtok_usd: 3.00, output_per_mtok_usd: 15.00}
+  models: [grok-3, grok-2]
+  tags: [free-with-data-sharing]
+  status: active
+
+- slug: perplexity-api
+  name: Perplexity Sonar API
+  category: provider-api
+  subcategory: search-grounded
+  country: US
+  website: https://docs.perplexity.ai
+  openai_compatible: true
+  pricing: {model: pay-per-token, trial_credits_usd: 5}
+  models: [sonar, sonar-pro]
+  status: active
+
+- slug: reka
+  name: Reka AI
+  category: provider-api
+  subcategory: multimodal
+  country: US
+  website: https://reka.ai
+  pricing: {model: trial-credits}
+  models: [reka-core, reka-flash, reka-edge]
+  status: active

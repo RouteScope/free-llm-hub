@@ -1,0 +1,498 @@
+# ============================================================
+# 8. SPECIALTY APIs
+# ============================================================
+
+# --- TTS ---
+- slug: elevenlabs
+  name: ElevenLabs
+  category: specialty-api
+  subcategory: tts
+  country: US
+  website: https://elevenlabs.io
+  pricing: {model: freemium, free_tier: true, monthly_usd: null}
+  notes: 10K chars/mês free
+  status: active
+
+- slug: playht
+  name: PlayHT
+  category: specialty-api
+  subcategory: tts
+  website: https://play.ht
+  pricing: {model: freemium, free_tier: true}
+  notes: 12.5K chars/mês free
+  status: active
+
+- slug: cartesia
+  name: Cartesia (Sonic)
+  category: specialty-api
+  subcategory: tts
+  website: https://cartesia.ai
+  pricing: {model: freemium, free_tier: true}
+  notes: 10K chars/mês free
+  status: active
+
+- slug: resemble
+  name: Resemble AI
+  category: specialty-api
+  subcategory: tts
+  website: https://resemble.ai
+  pricing: {model: trial-credits}
+  status: active
+
+- slug: coqui-tts
+  name: Coqui XTTS
+  category: specialty-api
+  subcategory: tts
+  open_source: true
+  license: CPML
+  github: https://github.com/coqui-ai/TTS
+  website: https://github.com/coqui-ai/TTS
+  pricing: {model: self-hosted}
+  status: active
+
+- slug: kokoro
+  name: Kokoro TTS
+  category: specialty-api
+  subcategory: tts
+  open_source: true
+  license: Apache-2.0
+  github: https://github.com/hexgrad/kokoro
+  website: https://github.com/hexgrad/kokoro
+  pricing: {model: self-hosted}
+  tags: [oss, lightweight]
+  status: active
+
+# --- STT ---
+- slug: deepgram
+  name: Deepgram
+  category: specialty-api
+  subcategory: stt
+  website: https://deepgram.com
+  pricing: {model: trial-credits, trial_credits_usd: 200}
+  status: active
+
+- slug: assemblyai
+  name: AssemblyAI
+  category: specialty-api
+  subcategory: stt
+  website: https://assemblyai.com
+  pricing: {model: trial-credits, trial_credits_usd: 50}
+  status: active
+
+- slug: whisper
+  name: Whisper
+  category: specialty-api
+  subcategory: stt
+  open_source: true
+  license: MIT
+  github: https://github.com/openai/whisper
+  website: https://openai.com/research/whisper
+  pricing: {model: self-hosted}
+  status: active
+
+- slug: faster-whisper
+  name: faster-whisper
+  category: specialty-api
+  subcategory: stt
+  open_source: true
+  license: MIT
+  github: https://github.com/SYSTRAN/faster-whisper
+  website: https://github.com/SYSTRAN/faster-whisper
+  pricing: {model: self-hosted}
+  status: active
+
+# --- Embeddings/Rerank ---
+- slug: voyage
+  name: Voyage AI
+  category: specialty-api
+  subcategory: embeddings
+  website: https://voyageai.com
+  pricing: {model: freemium, free_tier: true}
+  notes: 50M tokens free
+  status: active
+
+- slug: jina
+  name: Jina AI
+  category: specialty-api
+  subcategory: embeddings
+  website: https://jina.ai
+  pricing: {model: freemium, free_tier: true}
+  notes: 1M tokens free
+  status: active
+
+- slug: mixedbread
+  name: Mixedbread
+  category: specialty-api
+  subcategory: embeddings
+  country: DE
+  website: https://mixedbread.ai
+  pricing: {model: freemium, free_tier: true}
+  status: active
+
+- slug: nomic
+  name: Nomic Atlas
+  category: specialty-api
+  subcategory: embeddings
+  website: https://atlas.nomic.ai
+  pricing: {model: freemium, free_tier: true}
+  status: active
+
+# --- Image Gen ---
+- slug: fal
+  name: fal.ai
+  category: specialty-api
+  subcategory: image-gen
+  website: https://fal.ai
+  pricing: {model: trial-credits}
+  status: active
+
+- slug: pollinations
+  name: Pollinations
+  category: specialty-api
+  subcategory: image-gen
+  website: https://pollinations.ai
+  pricing: {model: free}
+  tags: [no-auth]
+  status: active
+
+- slug: replicate
+  name: Replicate
+  category: specialty-api
+  subcategory: multimodal
+  website: https://replicate.com
+  pricing: {model: trial-credits, trial_credits_usd: 0.50}
+  status: active
+
+- slug: comfyui
+  name: ComfyUI
+  category: specialty-api
+  subcategory: image-gen
+  open_source: true
+  license: GPL-3.0
+  github: https://github.com/comfyanonymous/ComfyUI
+  website: https://www.comfy.org
+  pricing: {model: self-hosted}
+  status: active
+
+- slug: a1111-webui
+  name: AUTOMATIC1111 WebUI
+  category: specialty-api
+  subcategory: image-gen
+  open_source: true
+  license: AGPL-3.0
+  github: https://github.com/AUTOMATIC1111/stable-diffusion-webui
+  website: https://github.com/AUTOMATIC1111/stable-diffusion-webui
+  pricing: {model: self-hosted}
+  status: active
+
+# --- Video Gen ---
+- slug: runway
+  name: Runway
+  category: specialty-api
+  subcategory: video-gen
+  website: https://runwayml.com
+  pricing: {model: subscription, monthly_usd: 15}
+  status: active
+
+- slug: kling
+  name: Kling
+  category: specialty-api
+  subcategory: video-gen
+  country: CN
+  website: https://kling.ai
+  pricing: {model: freemium, free_tier: true}
+  status: active
+
+- slug: bfl-flux
+  name: Black Forest Labs (FLUX)
+  category: specialty-api
+  subcategory: image-gen
+  country: DE
+  website: https://bfl.ai
+  pricing: {model: trial-credits}
+  status: active
+
+# ============================================================
+# 9. VECTOR DATABASES
+# ============================================================
+- slug: qdrant
+  name: Qdrant
+  category: vector-db
+  open_source: true
+  license: Apache-2.0
+  github: https://github.com/qdrant/qdrant
+  website: https://qdrant.tech
+  pricing: {model: freemium, free_tier: true}
+  notes: 1GB free cloud
+  status: active
+
+- slug: weaviate
+  name: Weaviate
+  category: vector-db
+  open_source: true
+  license: BSD-3
+  github: https://github.com/weaviate/weaviate
+  website: https://weaviate.io
+  pricing: {model: freemium, free_tier: true}
+  status: active
+
+- slug: milvus
+  name: Milvus
+  category: vector-db
+  open_source: true
+  license: Apache-2.0
+  github: https://github.com/milvus-io/milvus
+  website: https://milvus.io
+  pricing: {model: self-hosted}
+  status: active
+
+- slug: chroma
+  name: Chroma
+  category: vector-db
+  open_source: true
+  license: Apache-2.0
+  github: https://github.com/chroma-core/chroma
+  website: https://trychroma.com
+  pricing: {model: self-hosted}
+  status: active
+
+- slug: pgvector
+  name: pgvector
+  category: vector-db
+  open_source: true
+  license: PostgreSQL
+  github: https://github.com/pgvector/pgvector
+  website: https://github.com/pgvector/pgvector
+  pricing: {model: self-hosted}
+  tags: [postgres-extension]
+  status: active
+
+- slug: pinecone
+  name: Pinecone
+  category: vector-db
+  website: https://pinecone.io
+  pricing: {model: freemium, free_tier: true}
+  notes: 1 free index
+  status: active
+
+- slug: lancedb
+  name: LanceDB
+  category: vector-db
+  open_source: true
+  license: Apache-2.0
+  github: https://github.com/lancedb/lancedb
+  website: https://lancedb.com
+  pricing: {model: self-hosted}
+  status: active
+
+- slug: vespa
+  name: Vespa
+  category: vector-db
+  open_source: true
+  license: Apache-2.0
+  github: https://github.com/vespa-engine/vespa
+  website: https://vespa.ai
+  pricing: {model: self-hosted}
+  status: active
+
+# ============================================================
+# 10. EVAL FRAMEWORKS
+# ============================================================
+- slug: promptfoo
+  name: Promptfoo
+  category: eval-framework
+  open_source: true
+  license: MIT
+  github: https://github.com/promptfoo/promptfoo
+  website: https://promptfoo.dev
+  pricing: {model: self-hosted}
+  status: active
+
+- slug: deepeval
+  name: DeepEval
+  category: eval-framework
+  open_source: true
+  license: Apache-2.0
+  github: https://github.com/confident-ai/deepeval
+  website: https://deepeval.com
+  pricing: {model: self-hosted}
+  status: active
+
+- slug: ragas
+  name: Ragas
+  category: eval-framework
+  subcategory: rag-eval
+  open_source: true
+  license: Apache-2.0
+  github: https://github.com/explodinggradients/ragas
+  website: https://ragas.io
+  pricing: {model: self-hosted}
+  status: active
+
+- slug: openai-evals
+  name: OpenAI Evals
+  category: eval-framework
+  open_source: true
+  license: MIT
+  github: https://github.com/openai/evals
+  website: https://github.com/openai/evals
+  pricing: {model: self-hosted}
+  status: active
+
+# ============================================================
+# 11. MODEL CATALOGS / OPEN-WEIGHTS FAMILIES
+# ============================================================
+- slug: huggingface-hub
+  name: HuggingFace Hub
+  category: model-catalog
+  website: https://huggingface.co
+  pricing: {model: freemium, free_tier: true}
+  tags: [primary-catalog]
+  status: active
+
+- slug: modelscope
+  name: ModelScope (Alibaba)
+  category: model-catalog
+  country: CN
+  website: https://modelscope.cn
+  pricing: {model: freemium, free_tier: true}
+  status: active
+
+- slug: models-dev
+  name: models.dev
+  category: model-catalog
+  website: https://models.dev
+  pricing: {model: free}
+  tags: [programmatic]
+  status: active
+
+- slug: civitai
+  name: Civitai
+  category: model-catalog
+  subcategory: image-models
+  website: https://civitai.com
+  pricing: {model: freemium}
+  status: active
+
+# --- Open-Weights Families ---
+- slug: llama-family
+  name: Llama (Meta)
+  category: open-weights-family
+  license: Llama-Community
+  github: https://github.com/meta-llama/llama-models
+  website: https://llama.com
+  models: [llama-3.3-70b, llama-4-scout, llama-4-maverick, llama-4-behemoth]
+  status: active
+
+- slug: qwen-family
+  name: Qwen (Alibaba)
+  category: open-weights-family
+  license: Apache-2.0
+  github: https://github.com/QwenLM/Qwen
+  website: https://qwenlm.github.io
+  models: [qwen3-0.6b, qwen3-8b, qwen3-72b, qwen3-235b, qwen3.5-397b]
+  status: active
+
+- slug: deepseek-family
+  name: DeepSeek
+  category: open-weights-family
+  license: MIT
+  github: https://github.com/deepseek-ai
+  website: https://deepseek.com
+  models: [deepseek-v3, deepseek-r1, deepseek-v4-pro, deepseek-v4-flash]
+  tags: [moe, mit-license]
+  status: active
+
+- slug: mistral-family
+  name: Mistral / Mixtral
+  website: https://mistral.ai
+  category: open-weights-family
+  license: Apache-2.0
+  models: [mistral-7b, mixtral-8x7b, mixtral-8x22b, mistral-nemo, ministral-3b-8b]
+  status: active
+
+- slug: gemma-family
+  name: Gemma (Google)
+  website: https://ai.google.dev/gemma
+  category: open-weights-family
+  license: Gemma-Terms
+  models: [gemma-3-1b, gemma-3-4b, gemma-3-12b, gemma-3-27b]
+  status: active
+
+- slug: phi-family
+  name: Phi (Microsoft)
+  website: https://huggingface.co/microsoft/phi-4
+  category: open-weights-family
+  license: MIT
+  models: [phi-4, phi-4-mini]
+  status: active
+
+- slug: yi-family
+  name: Yi (01.AI)
+  website: https://01.ai
+  category: open-weights-family
+  license: Apache-2.0
+  models: [yi-6b, yi-9b, yi-34b]
+  status: active
+
+- slug: internlm-family
+  name: InternLM
+  category: open-weights-family
+  license: Apache-2.0
+  github: https://github.com/InternLM/InternLM
+  website: https://internlm.intern-ai.org.cn
+  models: [internlm2.5-7b, internlm3-20b]
+  status: active
+
+- slug: glm-family
+  name: GLM (Zhipu)
+  website: https://github.com/THUDM/GLM-4
+  category: open-weights-family
+  license: MIT-like
+  models: [glm-4-9b, glm-4-32b, glm-4.5-flash]
+  status: active
+
+- slug: hermes-family
+  name: Hermes (Nous Research)
+  website: https://nousresearch.com
+  category: open-weights-family
+  license: Llama-Community
+  models: [hermes-3-405b, hermes-4]
+  status: active
+
+- slug: gpt-oss
+  name: gpt-oss (OpenAI)
+  website: https://openai.com/index/introducing-gpt-oss
+  category: open-weights-family
+  license: Apache-2.0
+  models: [gpt-oss-20b, gpt-oss-120b]
+  tags: [openai-released]
+  status: active
+
+- slug: granite-family
+  name: Granite (IBM)
+  category: open-weights-family
+  license: Apache-2.0
+  github: https://github.com/ibm-granite
+  website: https://www.ibm.com/granite
+  models: [granite-3.0, granite-code]
+  status: active
+
+- slug: olmo-family
+  name: OLMo (AllenAI)
+  category: open-weights-family
+  license: Apache-2.0
+  github: https://github.com/allenai/OLMo
+  website: https://allenai.org/olmo
+  models: [olmo-2-1b, olmo-2-13b, olmo-2-32b]
+  tags: [fully-open, training-data-released]
+  status: active
+
+- slug: smollm
+  name: SmolLM (HuggingFace)
+  category: open-weights-family
+  license: Apache-2.0
+  github: https://github.com/huggingface/smollm
+  website: https://huggingface.co/blog/smollm
+  models: [smollm-135m, smollm-360m, smollm-1.7b]
+  status: active

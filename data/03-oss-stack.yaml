@@ -1,0 +1,512 @@
+# ============================================================
+# 3. INFERENCE ENGINES (OPEN-SOURCE)
+# ============================================================
+- slug: vllm
+  name: vLLM
+  category: inference-engine
+  subcategory: production
+  open_source: true
+  license: Apache-2.0
+  github: https://github.com/vllm-project/vllm
+  website: https://vllm.ai
+  openai_compatible: true
+  pricing: {model: self-hosted}
+  tags: [paged-attention, continuous-batching, multi-gpu]
+  status: active
+
+- slug: ollama
+  name: Ollama
+  category: inference-engine
+  subcategory: local-dev
+  open_source: true
+  license: MIT
+  github: https://github.com/ollama/ollama
+  website: https://ollama.com
+  openai_compatible: true
+  pricing: {model: self-hosted}
+  tags: [easy-setup, llama-cpp-wrapper]
+  status: active
+
+- slug: llama-cpp
+  name: llama.cpp
+  category: inference-engine
+  subcategory: edge
+  open_source: true
+  license: MIT
+  github: https://github.com/ggml-org/llama.cpp
+  website: https://github.com/ggml-org/llama.cpp
+  openai_compatible: true
+  pricing: {model: self-hosted}
+  tags: [gguf, cpu, edge, mobile]
+  status: active
+
+- slug: tgi
+  name: Text Generation Inference (TGI)
+  category: inference-engine
+  subcategory: production
+  open_source: true
+  license: Apache-2.0
+  github: https://github.com/huggingface/text-generation-inference
+  website: https://huggingface.co/docs/text-generation-inference
+  openai_compatible: true
+  pricing: {model: self-hosted}
+  tags: [huggingface, rust]
+  status: active
+
+- slug: sglang
+  name: SGLang
+  category: inference-engine
+  subcategory: production
+  open_source: true
+  license: Apache-2.0
+  github: https://github.com/sgl-project/sglang
+  website: https://sgl-project.github.io
+  openai_compatible: true
+  pricing: {model: self-hosted}
+  tags: [reasoning, structured-output, deepseek-r1-best]
+  status: active
+
+- slug: tensorrt-llm
+  name: TensorRT-LLM
+  category: inference-engine
+  subcategory: production
+  open_source: true
+  license: Apache-2.0
+  github: https://github.com/NVIDIA/TensorRT-LLM
+  website: https://nvidia.github.io/TensorRT-LLM
+  openai_compatible: true
+  pricing: {model: self-hosted}
+  tags: [nvidia-only, max-throughput]
+  status: active
+
+- slug: localai
+  name: LocalAI
+  category: inference-engine
+  subcategory: multi-modal
+  open_source: true
+  license: MIT
+  github: https://github.com/mudler/LocalAI
+  website: https://localai.io
+  openai_compatible: true
+  pricing: {model: self-hosted}
+  tags: [drop-in-openai, text-image-audio-tts]
+  status: active
+
+- slug: lmdeploy
+  name: LMDeploy
+  category: inference-engine
+  subcategory: production
+  open_source: true
+  license: Apache-2.0
+  github: https://github.com/InternLM/lmdeploy
+  website: https://lmdeploy.readthedocs.io
+  openai_compatible: true
+  pricing: {model: self-hosted}
+  status: active
+
+- slug: mlc-llm
+  name: MLC-LLM
+  category: inference-engine
+  subcategory: edge-mobile
+  open_source: true
+  license: Apache-2.0
+  github: https://github.com/mlc-ai/mlc-llm
+  website: https://llm.mlc.ai
+  pricing: {model: self-hosted}
+  tags: [web, mobile, edge]
+  status: active
+
+- slug: ktransformers
+  name: KTransformers
+  category: inference-engine
+  subcategory: moe-optimization
+  open_source: true
+  license: Apache-2.0
+  github: https://github.com/kvcache-ai/ktransformers
+  website: https://kvcache-ai.github.io/ktransformers
+  pricing: {model: self-hosted}
+  tags: [cpu-gpu-hybrid, moe]
+  status: active
+
+- slug: exllamav2
+  name: ExLlamaV2
+  category: inference-engine
+  subcategory: consumer-gpu
+  open_source: true
+  license: MIT
+  github: https://github.com/turboderp-org/exllamav2
+  website: https://github.com/turboderp-org/exllamav2
+  pricing: {model: self-hosted}
+  status: active
+
+- slug: aphrodite
+  name: Aphrodite Engine
+  category: inference-engine
+  subcategory: production
+  open_source: true
+  license: AGPL-3.0
+  github: https://github.com/aphrodite-engine/aphrodite-engine
+  website: https://aphrodite.pygmalion.chat
+  openai_compatible: true
+  pricing: {model: self-hosted}
+  tags: [vllm-fork]
+  status: active
+
+- slug: ctranslate2
+  name: CTranslate2
+  category: inference-engine
+  subcategory: optimized
+  open_source: true
+  license: MIT
+  github: https://github.com/OpenNMT/CTranslate2
+  website: https://opennmt.net/CTranslate2
+  pricing: {model: self-hosted}
+  status: active
+
+# ============================================================
+# 4. DESKTOP UIs / CHAT CLIENTS
+# ============================================================
+- slug: open-webui
+  name: Open WebUI
+  category: desktop-ui
+  open_source: true
+  license: MIT
+  github: https://github.com/open-webui/open-webui
+  website: https://openwebui.com
+  pricing: {model: self-hosted}
+  tags: [ollama, openai-compat, full-ui]
+  status: active
+
+- slug: text-gen-webui
+  name: Text Generation WebUI
+  category: desktop-ui
+  open_source: true
+  license: AGPL-3.0
+  github: https://github.com/oobabooga/text-generation-webui
+  website: https://github.com/oobabooga/text-generation-webui
+  pricing: {model: self-hosted}
+  tags: [gradio, multi-backend]
+  status: active
+
+- slug: jan
+  name: Jan
+  category: desktop-ui
+  open_source: true
+  license: AGPL-3.0
+  github: https://github.com/menloresearch/jan
+  website: https://jan.ai
+  pricing: {model: self-hosted}
+  tags: [chatgpt-alternative, desktop]
+  status: active
+
+- slug: gpt4all
+  name: GPT4All
+  category: desktop-ui
+  open_source: true
+  license: MIT
+  github: https://github.com/nomic-ai/gpt4all
+  website: https://gpt4all.io
+  pricing: {model: self-hosted}
+  status: active
+
+- slug: lm-studio
+  name: LM Studio
+  category: desktop-ui
+  open_source: false
+  license: Proprietary-Free
+  website: https://lmstudio.ai
+  pricing: {model: free}
+  tags: [desktop, easy]
+  status: active
+
+- slug: koboldcpp
+  name: KoboldCpp
+  category: desktop-ui
+  open_source: true
+  license: AGPL-3.0
+  github: https://github.com/LostRuins/koboldcpp
+  website: https://github.com/LostRuins/koboldcpp
+  pricing: {model: self-hosted}
+  tags: [roleplay, writing]
+  status: active
+
+# ============================================================
+# 5. GATEWAYS / ROUTERS / PROXIES
+# ============================================================
+- slug: litellm
+  name: LiteLLM
+  category: gateway
+  subcategory: proxy
+  open_source: true
+  license: MIT
+  github: https://github.com/BerriAI/litellm
+  website: https://litellm.ai
+  pricing: {model: self-hosted}
+  tags: [100-providers, openai-format-unified]
+  status: active
+
+- slug: portkey
+  name: Portkey AI Gateway
+  category: gateway
+  subcategory: proxy
+  open_source: true
+  license: MIT
+  github: https://github.com/Portkey-AI/gateway
+  website: https://portkey.ai
+  pricing: {model: freemium}
+  tags: [fallbacks, retries]
+  status: active
+
+- slug: one-api
+  name: OneAPI
+  category: gateway
+  subcategory: proxy
+  open_source: true
+  license: MIT
+  github: https://github.com/songquanpeng/one-api
+  website: https://github.com/songquanpeng/one-api
+  pricing: {model: self-hosted}
+  tags: [chinese-popular, multi-provider]
+  status: active
+
+- slug: new-api
+  name: NewAPI
+  category: gateway
+  subcategory: proxy
+  open_source: true
+  license: Apache-2.0
+  github: https://github.com/Calcium-Ion/new-api
+  website: https://github.com/Calcium-Ion/new-api
+  pricing: {model: self-hosted}
+  tags: [oneapi-fork-active]
+  status: active
+
+- slug: helicone
+  name: Helicone
+  category: gateway
+  subcategory: observability
+  open_source: true
+  license: Apache-2.0
+  github: https://github.com/Helicone/helicone
+  website: https://helicone.ai
+  pricing: {model: freemium}
+  status: active
+
+- slug: langfuse
+  name: Langfuse
+  category: gateway
+  subcategory: observability
+  open_source: true
+  license: MIT
+  github: https://github.com/langfuse/langfuse
+  website: https://langfuse.com
+  pricing: {model: freemium}
+  status: active
+
+- slug: routellm
+  name: RouteLLM
+  category: gateway
+  subcategory: router
+  open_source: true
+  license: Apache-2.0
+  github: https://github.com/lm-sys/RouteLLM
+  website: https://lmsys.org/blog/2024-07-01-routellm
+  pricing: {model: self-hosted}
+  tags: [cost-quality-routing]
+  status: active
+
+- slug: phoenix
+  name: Arize Phoenix
+  category: gateway
+  subcategory: observability
+  open_source: true
+  license: Elastic-2.0
+  github: https://github.com/Arize-ai/phoenix
+  website: https://docs.arize.com/phoenix
+  pricing: {model: self-hosted}
+  status: active
+
+# ============================================================
+# 6. AGENT FRAMEWORKS / LLM SDKs
+# ============================================================
+- slug: langchain
+  name: LangChain
+  category: llm-framework
+  open_source: true
+  license: MIT
+  github: https://github.com/langchain-ai/langchain
+  website: https://langchain.com
+  pricing: {model: self-hosted}
+  status: active
+
+- slug: llamaindex
+  name: LlamaIndex
+  category: llm-framework
+  subcategory: rag
+  open_source: true
+  license: MIT
+  github: https://github.com/run-llama/llama_index
+  website: https://llamaindex.ai
+  pricing: {model: self-hosted}
+  status: active
+
+- slug: haystack
+  name: Haystack
+  category: llm-framework
+  subcategory: rag
+  open_source: true
+  license: Apache-2.0
+  github: https://github.com/deepset-ai/haystack
+  website: https://haystack.deepset.ai
+  pricing: {model: self-hosted}
+  status: active
+
+- slug: crewai
+  name: CrewAI
+  category: agent-framework
+  subcategory: multi-agent
+  open_source: true
+  license: MIT
+  github: https://github.com/crewAIInc/crewAI
+  website: https://crewai.com
+  pricing: {model: self-hosted}
+  status: active
+
+- slug: autogen
+  name: AutoGen
+  category: agent-framework
+  subcategory: multi-agent
+  open_source: true
+  license: Apache-2.0
+  github: https://github.com/microsoft/autogen
+  website: https://microsoft.github.io/autogen
+  pricing: {model: self-hosted}
+  tags: [microsoft]
+  status: active
+
+- slug: langgraph
+  name: LangGraph
+  category: agent-framework
+  subcategory: stateful-agents
+  open_source: true
+  license: MIT
+  github: https://github.com/langchain-ai/langgraph
+  website: https://langchain-ai.github.io/langgraph
+  pricing: {model: self-hosted}
+  status: active
+
+- slug: pydantic-ai
+  name: Pydantic AI
+  category: agent-framework
+  subcategory: type-safe
+  open_source: true
+  license: MIT
+  github: https://github.com/pydantic/pydantic-ai
+  website: https://ai.pydantic.dev
+  pricing: {model: self-hosted}
+  status: active
+
+- slug: dspy
+  name: DSPy
+  category: llm-framework
+  subcategory: prompt-programming
+  open_source: true
+  license: MIT
+  github: https://github.com/stanfordnlp/dspy
+  website: https://dspy.ai
+  pricing: {model: self-hosted}
+  tags: [stanford]
+  status: active
+
+- slug: semantic-kernel
+  name: Semantic Kernel
+  category: llm-framework
+  open_source: true
+  license: MIT
+  github: https://github.com/microsoft/semantic-kernel
+  website: https://learn.microsoft.com/semantic-kernel
+  pricing: {model: self-hosted}
+  tags: [microsoft, dotnet, python]
+  status: active
+
+- slug: mastra
+  name: Mastra
+  category: agent-framework
+  subcategory: typescript
+  open_source: true
+  license: Apache-2.0
+  github: https://github.com/mastra-ai/mastra
+  website: https://mastra.ai
+  pricing: {model: self-hosted}
+  status: active
+
+- slug: vercel-ai-sdk
+  name: Vercel AI SDK
+  category: llm-framework
+  subcategory: react-nextjs
+  open_source: true
+  license: Apache-2.0
+  github: https://github.com/vercel/ai
+  website: https://sdk.vercel.ai
+  pricing: {model: free}
+  status: active
+
+# ============================================================
+# 7. CODING AGENTS (OSS)
+# ============================================================
+- slug: aider
+  name: Aider
+  category: coding-tool
+  subcategory: cli-agent
+  open_source: true
+  license: Apache-2.0
+  github: https://github.com/Aider-AI/aider
+  website: https://aider.chat
+  pricing: {model: self-hosted}
+  tags: [byok, cli]
+  status: active
+
+- slug: cline
+  name: Cline
+  category: coding-tool
+  subcategory: vscode-extension
+  open_source: true
+  license: Apache-2.0
+  github: https://github.com/cline/cline
+  website: https://cline.bot
+  pricing: {model: self-hosted}
+  status: active
+
+- slug: openhands
+  name: OpenHands
+  category: coding-tool
+  subcategory: autonomous-agent
+  open_source: true
+  license: MIT
+  github: https://github.com/All-Hands-AI/OpenHands
+  website: https://www.all-hands.dev
+  pricing: {model: self-hosted}
+  tags: [devin-alternative]
+  status: active
+
+- slug: continue
+  name: Continue.dev
+  category: coding-tool
+  subcategory: ide-extension
+  open_source: true
+  license: Apache-2.0
+  github: https://github.com/continuedev/continue
+  website: https://continue.dev
+  pricing: {model: self-hosted}
+  status: active
+
+- slug: codex-cli
+  name: Codex CLI
+  category: coding-tool
+  subcategory: cli-agent
+  open_source: true
+  license: Apache-2.0
+  github: https://github.com/openai/codex
+  website: https://github.com/openai/codex
+  pricing: {model: self-hosted}
+  status: active
