@@ -1893,7 +1893,7 @@
   category: open-weights-family
   license: Apache-2.0
   github: https://github.com/InternLM/InternLM
-  website: https://internlm.intern-ai.org.cn
+  website: https://github.com/InternLM/InternLM
   models: [internlm2.5-7b, internlm3-20b]
   status: active
 
