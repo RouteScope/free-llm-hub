@@ -1,18 +1,38 @@
 name: Update Hub
 
 on:
+  # Cron: a cada 6 horas
   schedule:
-    - cron: "0 */6 * * *"  # a cada 6h
+    - cron: "0 */6 * * *"
+
+  # Manual trigger
   workflow_dispatch:
+
+  # Push: usa negação (!) em vez de paths-ignore (não pode ter ambos)
   push:
     branches: [main]
     paths:
       - 'data/0*.yaml'
-      - 'scripts/**'
       - 'data/schema.json'
+      - 'scripts/**'
+      - 'Makefile'
+      - 'requirements.txt'
+      - '.github/workflows/**'
+      - '!data/hub.yaml'
+      - '!data/verified*.json'
 
+  # Validação em PRs (paths-ignore aqui é permitido pois não tem 'paths')
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - 'data/hub.yaml'
+      - 'data/verified*.json'
+      - 'README.md'
+      - 'README.pt-BR.md'
+
+# Evita execuções concorrentes que poderiam corromper data/hub.yaml
 concurrency:
-  group: update-hub
+  group: update-hub-${{ github.ref }}
   cancel-in-progress: false
 
 permissions:
@@ -20,7 +40,11 @@ permissions:
   pull-requests: write
 
 jobs:
-  update:
+  # ─────────────────────────────────────────────────────────────
+  # Job 1: CI — valida PRs sem rodar pipeline completo nem abrir PR
+  # ─────────────────────────────────────────────────────────────
+  ci:
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -30,57 +54,116 @@ jobs:
           python-version: '3.12'
           cache: 'pip'
 
-      - run: pip install -r requirements.txt
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
-      - name: Run pipeline
-        run: make all
+      - name: Validate YAML structure
+        run: python scripts/validate.py
+
+      - name: Check render works
+        run: python scripts/render_readme.py
+
+  # ─────────────────────────────────────────────────────────────
+  # Job 2: Update — cron/manual/push, abre PR se houver mudanças
+  # ─────────────────────────────────────────────────────────────
+  update:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fix websites
+        run: python scripts/fix_websites.py
+
+      - name: Merge YAML files
+        run: ./scripts/merge.sh
+
+      - name: Validate
+        run: python scripts/validate.py
 
       - name: Verify endpoints
         run: python scripts/verify_endpoints.py
+        continue-on-error: true  # falha de rede não deve quebrar o run
 
-      - name: Re-render with updated health
+      - name: Render README (EN + PT-BR)
         run: python scripts/render_readme.py
 
       - name: Detect changes
         id: diff
         run: |
-          if git diff --quiet -- data/hub.yaml data/verified.json README.md README.pt-BR.md; then
-            echo "changed=false" >> $GITHUB_OUTPUT
-          else
-            echo "changed=true" >> $GITHUB_OUTPUT
-            echo "summary=$(git diff --stat -- data/ README*.md | tail -1)" >> $GITHUB_OUTPUT
+          # Lista arquivos modificados (com aspas pra prevenir globbing - SC2086)
+          changed_files="$(git status --porcelain | awk '{print $2}' | tr '\n' ' ')"
+
+          if [ -z "${changed_files}" ]; then
+            echo "changed=false" >> "${GITHUB_OUTPUT}"
+            echo "ℹ️ Nenhuma mudança detectada"
+            exit 0
           fi
+
+          # Resumo do diff
+          summary="$(git diff --stat | tail -1)"
+
+          # Stats do hub
+          total="$(python -c 'import yaml; print(len(yaml.safe_load(open("data/hub.yaml"))))')"
+
+          if [ -f data/verified.json ]; then
+            alive="$(python -c 'import json; d=json.load(open("data/verified.json")); print(sum(1 for v in d.values() if v))')"
+            verified_total="$(python -c 'import json; d=json.load(open("data/verified.json")); print(len(d))')"
+          else
+            alive="0"
+            verified_total="0"
+          fi
+
+          # Bloco único de output (SC2129 - evita múltiplos redirects)
+          {
+            echo "changed=true"
+            echo "files=${changed_files}"
+            echo "summary=${summary}"
+            echo "total=${total}"
+            echo "alive=${alive}"
+            echo "verified_total=${verified_total}"
+          } >> "${GITHUB_OUTPUT}"
+
+          echo "✅ Mudanças detectadas: ${summary}"
 
       - name: Create Pull Request
         if: steps.diff.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
-          commit-message: "chore: auto-refresh hub data"
+          commit-message: "chore(auto): refresh hub data and health"
           title: "🤖 Auto-update: hub refresh"
           body: |
-            Automated refresh from scheduled run.
-            
-            **Stats changed:**
+            ## 🔄 Automated Hub Refresh
+
+            This PR was automatically generated by the scheduled workflow.
+
+            ### 📊 Current Stats
+            - **Total entries:** `${{ steps.diff.outputs.total }}`
+            - **Endpoints alive:** `${{ steps.diff.outputs.alive }}/${{ steps.diff.outputs.verified_total }}`
+
+            ### 📝 Files Changed
             ```
             ${{ steps.diff.outputs.summary }}
             ```
-            
-            🔄 Triggered by: `${{ github.event_name }}`  
-            📅 Run: [#${{ github.run_number }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
-          branch: auto/refresh
+
+            ### ⚙️ Trigger
+            - **Event:** `${{ github.event_name }}`
+            - **Run:** [#${{ github.run_number }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
+
+            ---
+            🤖 _Generated by Update Hub workflow_
+          branch: auto/hub-refresh
           delete-branch: true
           labels: |
             automated
             hub-refresh
-
-  ci:
-    runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
-    steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-          cache: 'pip'
-      - run: pip install -r requirements.txt
-      - run: python scripts/validate.py
+          author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+          committer: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"

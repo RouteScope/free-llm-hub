@@ -29,3 +29,4 @@ build/
 # Output gerado
 data/cache/
 data/verified.json
+actionlint
