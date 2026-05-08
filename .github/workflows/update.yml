@@ -1,35 +1,86 @@
-name: Weekly Update & Validation
+name: Update Hub
 
 on:
   schedule:
-    - cron: "0 6 * * 1"
+    - cron: "0 */6 * * *"  # a cada 6h
   workflow_dispatch:
   push:
+    branches: [main]
     paths:
-      - 'data/**'
+      - 'data/0*.yaml'
       - 'scripts/**'
+      - 'data/schema.json'
+
+concurrency:
+  group: update-hub
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
-  validate:
+  update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with: { python-version: "3.12" }
-      - run: pip install -r requirements.txt
-      - run: ./scripts/merge.sh
-      - run: python scripts/validate.py
-      - run: python scripts/render_readme.py
+      - uses: actions/checkout@v5
 
-      - name: Verify endpoints (weekly only)
-        if: github.event_name == 'schedule'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - run: pip install -r requirements.txt
+
+      - name: Run pipeline
+        run: make all
+
+      - name: Verify endpoints
         run: python scripts/verify_endpoints.py
 
-      - name: Commit changes
-        if: github.event_name == 'schedule'
+      - name: Re-render with updated health
+        run: python scripts/render_readme.py
+
+      - name: Detect changes
+        id: diff
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md data/verified.json data/hub.yaml
-          git diff --staged --quiet || git commit -m "chore: weekly auto-update"
-          git push
+          if git diff --quiet -- data/hub.yaml data/verified.json README.md README.pt-BR.md; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "summary=$(git diff --stat -- data/ README*.md | tail -1)" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create Pull Request
+        if: steps.diff.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: auto-refresh hub data"
+          title: "🤖 Auto-update: hub refresh"
+          body: |
+            Automated refresh from scheduled run.
+            
+            **Stats changed:**
+            ```
+            ${{ steps.diff.outputs.summary }}
+            ```
+            
+            🔄 Triggered by: `${{ github.event_name }}`  
+            📅 Run: [#${{ github.run_number }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
+          branch: auto/refresh
+          delete-branch: true
+          labels: |
+            automated
+            hub-refresh
+
+  ci:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+      - run: pip install -r requirements.txt
+      - run: python scripts/validate.py
