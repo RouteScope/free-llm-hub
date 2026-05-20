@@ -1,0 +1,41 @@
+name: Check Site Anchors
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # a cada 6 horas
+  workflow_dispatch:        # permite rodar manualmente
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - 'scripts/**'
+      - 'mkdocs.yml'
+      - 'check-anchors.sh'
+      - '.github/workflows/check-anchors.yml'
+
+jobs:
+  check:
+    name: Validate production anchors
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Wait for GitHub Pages deploy (60s)
+        if: github.event_name == 'push'
+        run: |
+          echo "⏳ Aguardando deploy do GitHub Pages..."
+          sleep 60
+
+      - name: Make script executable
+        run: chmod +x check-anchors.sh
+
+      - name: Run anchor validation
+        run: ./check-anchors.sh
+
+      - name: Report failure
+        if: failure()
+        run: |
+          echo "::error title=Anchors quebrados::Um ou mais anchors críticos estão ausentes no site em produção!"
+          echo "Verifique: https://free-llm-hub.freedomdigitalhub.com.br/"
