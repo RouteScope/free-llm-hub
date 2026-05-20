@@ -1,12 +1,15 @@
-site_name: free-llm-hub
+site_name: Free LLM Hub
 site_description: The broadest auto-refreshed registry of free, BYOK, self-hosted and trial LLM APIs
 site_url: https://free-llm-hub.freedomdigitalhub.com.br/
+site_author: Felipe Truman
 repo_url: https://github.com/felipetruman/free-llm-hub
 repo_name: felipetruman/free-llm-hub
 edit_uri: edit/main/docs/
+copyright: Copyright &copy; 2026 Felipe Truman
 
 theme:
   name: material
+  language: pt-BR
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -36,7 +39,10 @@ theme:
     repo: fontawesome/brands/github
 
 plugins:
-  - search
+  - search:
+      lang:
+        - pt
+        - en
   - minify:
       minify_html: true
 
@@ -44,6 +50,10 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.emoji:
