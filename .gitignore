@@ -40,3 +40,7 @@ site/
 
 # Python cache from new scripts
 scripts/__pycache__/
+
+# Claude Code & harness internal state (never commit)
+.claude/
+.harness-mem/
