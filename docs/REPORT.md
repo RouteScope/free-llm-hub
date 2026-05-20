@@ -279,7 +279,7 @@ _(no discovery data yet)_
 
 ## How to contribute
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) (coming soon — Phase C of roadmap).
+See [https://github.com/felipetruman/free-llm-hub/blob/main/CONTRIBUTING.md](https://github.com/felipetruman/free-llm-hub/blob/main/CONTRIBUTING.md) (coming soon — Phase C of roadmap).
 
 ## License
 
