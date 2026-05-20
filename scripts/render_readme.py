@@ -5,6 +5,16 @@ from collections import defaultdict
 import json
 import yaml
 
+def _slugify(text: str) -> str:
+    """Anchor compatível com GitHub/MkDocs: remove emojis, lowercase, hifeniza."""
+    import re as _re
+    text = _re.sub(r"[^\w\s-]", "", text, flags=_re.UNICODE)
+    text = text.encode("ascii", "ignore").decode("ascii")
+    text = text.lower().strip()
+    text = _re.sub(r"\s+", "-", text)
+    text = _re.sub(r"-+", "-", text)
+    return text.strip("-")
+
 ROOT = Path(__file__).resolve().parent.parent
 
 CATEGORY_NAMES = {
@@ -143,7 +153,7 @@ def main():
     out.append("\n## 📑 Table of Contents\n")
     for cat in CATEGORY_NAMES:
         if cat in grouped:
-            slug_anchor = CATEGORY_NAMES[cat].lower().replace(" ", "-").replace("/", "")
+            slug_anchor = _slugify(CATEGORY_NAMES[cat])
             out.append(f"- [{CATEGORY_NAMES[cat]}](#{slug_anchor}) ({len(grouped[cat])})")
     out.append("\n---\n")
 
