@@ -7,20 +7,20 @@
 
 ## 📑 Table of Contents
 
-- [📡 Provider APIs](#📡-provider-apis) (18)
-- [🔌 Inference Providers](#🔌-inference-providers) (24)
-- [💰 Subscription Plans](#💰-subscription-plans) (47)
-- [🛠️ Inference Engines (OSS)](#🛠️-inference-engines-(oss)) (13)
-- [🚪 Gateways / Routers](#🚪-gateways--routers) (12)
-- [🎨 Specialty APIs](#🎨-specialty-apis) (22)
-- [🤖 Agent Frameworks](#🤖-agent-frameworks) (5)
-- [📚 LLM Frameworks](#📚-llm-frameworks) (6)
-- [🗄️ Vector Databases](#🗄️-vector-databases) (8)
-- [📊 Eval Frameworks](#📊-eval-frameworks) (4)
-- [📦 Model Catalogs](#📦-model-catalogs) (4)
-- [💻 Coding Tools](#💻-coding-tools) (5)
-- [🖥️ Desktop UIs](#🖥️-desktop-uis) (6)
-- [🧬 Open-Weights Families](#🧬-open-weights-families) (14)
+- [📡 Provider APIs](#provider-apis) (18)
+- [🔌 Inference Providers](#inference-providers) (24)
+- [💰 Subscription Plans](#subscription-plans) (47)
+- [🛠️ Inference Engines (OSS)](#inference-engines-oss) (13)
+- [🚪 Gateways / Routers](#gateways-routers) (12)
+- [🎨 Specialty APIs](#specialty-apis) (22)
+- [🤖 Agent Frameworks](#agent-frameworks) (5)
+- [📚 LLM Frameworks](#llm-frameworks) (6)
+- [🗄️ Vector Databases](#vector-databases) (8)
+- [📊 Eval Frameworks](#eval-frameworks) (4)
+- [📦 Model Catalogs](#model-catalogs) (4)
+- [💻 Coding Tools](#coding-tools) (5)
+- [🖥️ Desktop UIs](#desktop-uis) (6)
+- [🧬 Open-Weights Families](#open-weights-families) (14)
 
 ---
 
