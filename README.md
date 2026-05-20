@@ -1,5 +1,7 @@
 # 🌟 Free LLM Hub
 
+![Anchors](https://github.com/felipetruman/free-llm-hub/actions/workflows/check-anchors.yml/badge.svg)
+
 > A unified, community-driven catalog of LLM APIs, inference engines, gateways, and the entire OSS LLM ecosystem.
 
 **Total entries:** 188 • **Last updated:** auto-generated
